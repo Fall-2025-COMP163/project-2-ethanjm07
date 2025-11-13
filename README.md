@@ -145,3 +145,8 @@ Feel free to add your own creative touches for bonus points:
 - Additional character classes beyond the three required
 - More weapon types with different properties
 - Enhanced special abilities with unique effects
+
+
+## My Readme
+
+I didn't add anything creative besides the attack names. The only AI I used was for logic and understanding certain methods.

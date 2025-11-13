@@ -1,9 +1,9 @@
 """
 COMP 163 - Project 2: Character Abilities Showcase
-Name: [Your Name Here]
-Date: [Date]
+Name: Ethan Mitchell
+Date: Nov 12 2025
 
-AI Usage: [Document any AI assistance used]
+AI Usage: AI helped with logic and understanding under certain methods.
 Example: AI helped with inheritance structure and method overriding concepts
 """
 
@@ -105,9 +105,9 @@ class Character:
         Prints the character's current stats in a nice format.
         """
         stats = {'Name':self.name,
-                 'Health': self.health,
-                 'Strength': self.strength,
-                 'Magic':self.magic}
+                'Health': self.health,
+                'Strength': self.strength,
+                'Magic':self.magic}
         
         for stat, value in stats.items():
             print(f'{stat} : {value} ' )
@@ -265,7 +265,7 @@ class Rogue(Player):
         target.take_damage(damage)
         # TODO: Implement sneak attack
         # Should always do critical damage
-        pass
+        
 
 class Weapon:
     """
@@ -287,7 +287,7 @@ class Weapon:
         Display information about this weapon.
         """
         weapon_info = {'Weapon' : self.name,
-                       'Bonus Damage': self.damage_bonus}
+                    'Bonus Damage': self.damage_bonus}
         for weapon_stat, weapon_information in weapon_info.items():
             print(f'{weapon_stat} : {weapon_information}') 
         # TODO: Print weapon name and damage bonus
