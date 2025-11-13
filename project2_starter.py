@@ -61,8 +61,7 @@ class Character:
     
     def __init__(self, name, health, strength, magic):
         """Initialize basic character attributes"""
-        # TODO: Set the character's name, health, strength, and magic
-        # These should be stored as instance variables
+        
         self.name = name
         self.health = health
         self.strength = strength
@@ -81,9 +80,7 @@ class Character:
         damage = self.strength
         target.take_damage(damage)
         print(f"{self.name} attacks {target.name} for {damage} damage!")
-        # TODO: Implement basic attack
-        # Damage should be based on self.strength
-        # Use target.take_damage(damage) to apply damage
+        
         
         
     def take_damage(self, damage):
@@ -95,9 +92,7 @@ class Character:
         if self.health <= 0:
             self.health = 0
             
-        # TODO: Implement taking damage
-        # Reduce self.health by damage amount
-        # Make sure health doesn't go below 0
+       
         
         
     def display_stats(self):
@@ -111,8 +106,7 @@ class Character:
         
         for stat, value in stats.items():
             print(f'{stat} : {value} ' )
-        # TODO: Print character's name, health, strength, and magic
-        # Make it look nice with formatting
+        
         
 
 class Player(Character):
@@ -131,9 +125,6 @@ class Player(Character):
         self.level = 1
         self.experience = 0
         
-        # TODO: Call super().__init__() with the basic character info
-        # TODO: Store the character_class (like "Warrior", "Mage", etc.)
-        # TODO: Add any other player-specific attributes (level, experience, etc.)
         
         
     def display_stats(self):
@@ -148,9 +139,6 @@ class Player(Character):
         print('')
         for stat,vaule in player_stats.items():
             print(f'{stat} : {vaule} ')
-        # TODO: Call the parent's display_stats method using super()
-        # TODO: Then print additional player info like class and level
-        
 
 class Warrior(Player):
     """
@@ -164,8 +152,6 @@ class Warrior(Player):
         Warriors should have: high health, high strength, low magic
         """
         super().__init__(name,'Warrior', health=120,strength=15,magic=5)
-        # TODO: Call super().__init__() with warrior-appropriate stats
-        # Suggested stats: health=120, strength=15, magic=5
         
         
     def attack(self, target):
@@ -175,9 +161,7 @@ class Warrior(Player):
         """
         damage = self.strength + 5
         target.take_damage(damage)
-        # TODO: Implement warrior attack
-        # Should do more damage than basic attack
-        # Maybe strength + 5 bonus damage?
+        
         
         
     def power_strike(self, target):
@@ -186,10 +170,7 @@ class Warrior(Player):
         """
         damage = self.strength + 20
         target.take_damage(damage)
-        # TODO: Implement power strike
-        # Should do significantly more damage than regular attack
         
-
 class Mage(Player):
     """
     Mage class - magical spellcaster.
@@ -202,9 +183,6 @@ class Mage(Player):
         Mages should have: low health, low strength, high magic
         """
         super().__init__(name,'Mage', health=80,strength=8,magic=20)
-        # TODO: Call super().__init__() with mage-appropriate stats
-        # Suggested stats: health=80, strength=8, magic=20
-        
         
     def attack(self, target):
         """
@@ -213,8 +191,6 @@ class Mage(Player):
         """
         damage = self.magic + 5
         target.take_damage(damage)
-        # TODO: Implement mage attack
-        # Should use self.magic for damage calculation instead of strength
         
         
     def fireball(self, target):
@@ -223,10 +199,7 @@ class Mage(Player):
         """
         damage = self.magic + 20
         target.take_damage(damage)
-        # TODO: Implement fireball spell
-        # Should do magic-based damage with bonus
-    
-
+        
 class Rogue(Player):
     """
     Rogue class - quick and sneaky fighter.
@@ -239,8 +212,7 @@ class Rogue(Player):
         Rogues should have: medium health, medium strength, medium magic
         """
         super().__init__(name,'Rogue',health=90,strength=12,magic=10)
-        # TODO: Call super().__init__() with rogue-appropriate stats
-        # Suggested stats: health=90, strength=12, magic=10
+        
         
     
     def attack(self, target):
@@ -252,9 +224,6 @@ class Rogue(Player):
         if random.randint(1,10) <= 3:
             damage *= 2
         target.take_damage(damage)
-        # TODO: Implement rogue attack
-        # Could add a chance for critical hit (double damage)
-        # Hint: use random.randint(1, 10) and if result <= 3, it's a crit
         
         
     def sneak_attack(self, target):
@@ -263,8 +232,7 @@ class Rogue(Player):
         """
         damage = self.strength * 2
         target.take_damage(damage)
-        # TODO: Implement sneak attack
-        # Should always do critical damage
+        
         
 
 class Weapon:
@@ -279,7 +247,6 @@ class Weapon:
         """
         self.name = name
         self.damage_bonus = damage_bonus
-        # TODO: Store weapon name and damage bonus
 
         
     def display_info(self):
@@ -290,7 +257,6 @@ class Weapon:
                     'Bonus Damage': self.damage_bonus}
         for weapon_stat, weapon_information in weapon_info.items():
             print(f'{weapon_stat} : {weapon_information}') 
-        # TODO: Print weapon name and damage bonus
         
 
 # ============================================================================
